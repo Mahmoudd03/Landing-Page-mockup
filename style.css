@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px red dashed;  */
+    
+}
+:root{
+    --gradient-left: linear-gradient(to left, #e66465, #9198e5);
+    --gradient: linear-gradient(#e66465, #9198e5);
+    --gradient-circle: conic-gradient(#e66465, #9198e5, #e66465);
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: .15rem;
+}
+.title__icon{
+    width: 40px;
+    height: 40px;
+}
+.search-icon{
+    width: 30px;
+    height: 30px;
+}
+nav{
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    font-size: 1.75rem;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    margin-left: 2%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.navbar__list{
+    display: flex;
+    justify-content: space-around;
+    gap: 4%;
+    align-items: center;
+    list-style-type: none;
+    height: 100%;
+}
+.navbar__list li{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.navbar__list li:last-child{
+    text-align: center;
+    background: var(--gradient-left);
+}
+.navbar__list li:last-child a{
+    color: white;
+    width: 80px;
+}
+.navbar__list a, .navbar__list a:link, .navbar__list a:hover, .navbar__list a:active{
+    color: black;
+    text-decoration: none;
+}
+.search-box{
+    margin-right: 5%;
+}
+
+.hero-section{
+    position: relative;
+    height: 91vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.hero-section::before{
+    content: "";
+    position: absolute;
+    background-image: url(./Images/two-business-men-talking.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    filter:brightness(0.3);
+}
+.hero-main{
+    position: relative;
+    width: 65%;
+    color: white;
+    padding: 1%;
+    font-size: 2rem;
+    border-left: 4px solid;
+    border-image-slice: 1;
+    border-image-source: var(--gradient);
+}
+.buttons{
+    margin-top: 2%;
+    display: flex;
+    gap: 1rem;
+}
+.button{
+    font-size: 2rem;
+    padding: .5rem 1.5rem;
+    border-radius: 29px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.readMoreButton{
+    color: white;
+    background: var(--gradient-left);
+    border: none;
+}
+.requestButton{
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+.button:hover{
+    cursor: pointer;
+    scale: 1.05;
+    transition: all .25s;
+}
+.icons{
+    width:  40px;
+    height: 40px;
+    border: 2px white solid;
+    padding: 1%;
+    border-radius: 50%;
+}
+.properties-section{
+    background: var(--gradient-left);
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 5%;
+    gap: 5%;
+    font-size: 1.2rem;
+}
+.property{
+    width: 60ch;
+    display: flex;
+    flex-direction: column;
+}
+.property__header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10%;
+    margin-bottom: 5%;
+}
+.aboutUs-section{
+    position: relative;
+    padding: 5% 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.map-background::before{
+    content: "";
+    position: absolute;
+    background-image: url(./Images/white\ world\ map.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    transform: translateY(52%);
+    filter: opacity(.3);
+}
+hr{
+    width: 10ch;
+    height: 3px;
+    background: var(--gradient-left);
+    border: none;
+}
+.aboutUs-title{
+    font-size: 2rem;
+}
+.aboutUs--text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.subtitle{
+    font-size: 2rem;
+}
+.aboutUs__paragraph{
+    font-size: 1.5rem;
+}
+.aboutUs__image{
+    position: relative;
+    width: fit-content;
+}
+.aboutUsButton{
+    margin-top: 1%;
+    width: fit-content;
+}
+.business-man{
+    position: relative;
+    z-index: 1;
+}
+.image-border{
+    position: absolute;
+    bottom: -1px;
+    height: 100px;
+    background: transparent;
+    left: 4px;
+    right: 4px;
+    z-index: 0;
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: var(--gradient-left);
+}
+.services{
+    padding: 5% 15%;
+}
+.services-title{
+    font-size: 3rem;
+    margin-bottom: 2%;
+}
+.card-image{
+    width: 300px;
+    height: 190px;
+}
+.gallery{
+    display: flex;
+    justify-content: space-around;
+}
+.card-icon{
+    padding: 5px;
+    border: none 1px;
+    background:var(--gradient-circle);
+    border-radius: 50%;
+    width: 40px;
+    height:40px;
+}
+.image-title{
+    margin-left: 15%;
+    background-color: rgb(240, 240, 240);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transform: translateY(-20px);
+    display: flex;
+    align-items: center;
+    gap: 15%;
+    font-size: 1.7rem;
+}
+.contact-icon{
+    width: 30px;
+    height: 30px;
+}
+.contact-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    background: var(--gradient-left);
+    padding: 2% 0;
+}
